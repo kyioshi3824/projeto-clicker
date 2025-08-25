@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    font-family: arial, sans-serif;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+#cabecalho {
+    background-color: #a18065;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+#cabecalho h1{
+    margin: 0;
+    font-size: 24px;
+    color: black;
+}
+
+#pontos{
+    font-size: 20px;
+    margin: 10px 0;
+    color: rgb(0, 0, 0);
+}
+
+#area-jogo{
+    width: 100%;
+    min-width: 400px;
+    background-color: #ffe9d3;
+    border-radius: 10px;
+    flex-grow: 1;
+    
+
+    
+}
