@@ -39,7 +39,34 @@ function criarEmoji() {
     emoji.style.left = `${Math.random() * maxX}px`;
     emoji.style.top = `${Math.random() * maxY}px`;
 
-    //clique no emoji
+//clique no emoji
+emoji.addEventListener('click', () => {
+    emoji.classList.add('clicado');
+    pontos+=5;
+    pontosDisplay.textContent = pontos;
+    
+    const mensagem = mensagensZoeiras[Math.floor(Math.random()*mensagensZoeiras.length)]
+    adicionarHistorico(`${mensagem} (${emoji.textContent})`);
+    if(emoji.isConnected){
+        emoji.remove();
+    }
+    areajogo.appendChild(emoji);
 
+    setTimeout(() =>{
+        if(emoji.isConnected){
+            emoji.remove();
+        }
+        pontos = Math.max(0, pontos - 1);
+        pontosDisplay.textContent = pontos;
+        adicionarHistorico(`perdeu o emoji ${emoji.textContent}!`)
+    },2000);
+    
 
+});
 }
+
+ //criar emojis
+ setInterval(criarEmoji, 1500);
+
+ //criar o primeiro emoji
+ criarEmoji();
