@@ -28,6 +28,8 @@ body{
     color: rgb(0, 0, 0);
 }
 
+
+
 #area-jogo{
     width: 100%;
     min-width: 400px;
@@ -36,5 +38,38 @@ body{
     flex-grow: 1;
     
 
-    
 }
+.emoji{
+    position: absolute;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+}
+.emoji.clicado{
+    transform: scale(1.2);
+}
+#lista-historico{
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    max-width: 400px;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+#lista-historico li {
+    padding: 8px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+#lista-historico li.zoeiro {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+@media (max-width: 600px)
